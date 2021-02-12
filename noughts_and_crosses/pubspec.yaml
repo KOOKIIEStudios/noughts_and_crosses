@@ -26,6 +26,7 @@ dependencies:
   # window_utils: any
   # windows utils still affected by cross-linking bug: https://github.com/flutter/flutter/issues/66224
   logger: ^0.9.4
+  provider: ^4.3.2
 
 
   # The following adds the Cupertino Icons font to your application.
