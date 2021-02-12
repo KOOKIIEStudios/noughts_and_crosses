@@ -1,5 +1,7 @@
 // GridView containing the tic-tac-toe UI
 // Standard libraries
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 // External Libraries
 import 'package:logger/logger.dart';
@@ -81,23 +83,28 @@ class GridCellState extends State<GridCell> {
             color: cellColour,
           ),
           onTap: () {
-            if (!ticTacToe.hasEnded()) {
-              ticTacToe.setContents(this.index);
-              if (ticTacToe.turn() == 1) {
-                status.statusText = p1Text;
-              }
-              else {
-                status.statusText = p2Text;
-              }
+            if (ticTacToe.hasEnded) {
+              logger.i("Game has already ended!");
             }
             else {
+              logger.d("Player ${ticTacToe.turn()} has chosen index ${this.index}");
               ticTacToe.setContents(this.index);
               String result = hasWon(ticTacToe.contents);
               if (result.isNotEmpty) {
                 status.statusText = result + resultSuffix;
+                ticTacToe.hasEnded = true;
               }
               else {
-                status.statusText = tieText;
+                if (ticTacToe.isLastMove()) {
+                  status.statusText = tieText;
+                  ticTacToe.hasEnded = true;
+                }
+                else if (ticTacToe.turn() == 1) {
+                  status.statusText = p1Text;
+                }
+                else {
+                  status.statusText = p2Text;
+                }
               }
             }
           },
