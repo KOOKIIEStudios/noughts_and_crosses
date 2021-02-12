@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 // External Libraries
 import 'package:logger/logger.dart';
-import 'package:noughts_and_crosses/models/status_model.dart';
 import 'package:provider/provider.dart';
 // Internal
 import 'screens/home.dart';
@@ -17,6 +16,7 @@ var logger = Logger(
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     logger.i("Now fetching the home screen...");
     // Use multiprovider for future extension
     return MultiProvider(
