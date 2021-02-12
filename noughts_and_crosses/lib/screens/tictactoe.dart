@@ -6,6 +6,7 @@ import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
 // Internal
 import 'constants.dart';
+import '../game_engine.dart';
 import '../models/tictactoe_model.dart';
 import '../models/status_model.dart';
 
@@ -85,7 +86,13 @@ class GridCellState extends State<GridCell> {
               }
             }
             else {
-              status.statusText = "placeholder" + resultSuffix;
+              String result = hasWon(ticTacToe.contents);
+              if (result.isNotEmpty) {
+                status.statusText = result + resultSuffix;
+              }
+              else {
+                status.statusText = tieText;
+              }
             }
           },
         );

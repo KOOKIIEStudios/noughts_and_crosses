@@ -18,7 +18,7 @@ class TicTacToeModel extends ChangeNotifier {
   List<String> get contents => content;
 
   bool hasEnded() {
-    if (counter < 8) {
+    if (counter < 9) {
       return false;
     }
     else return true;

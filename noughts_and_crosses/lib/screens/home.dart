@@ -18,20 +18,39 @@ class Home extends StatelessWidget {
     logger.d("Start building Home");
     return Scaffold(
       body: Center(
-        child: Column(
+        child: Row (
           children: [
             Padding(
-              padding: EdgeInsets.all(instructionPadding),
-              child: instructions,
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(instructionPadding),
+                    child: instructions,
+                  ),
+                  TicTacToe(),
+                  Padding(
+                    padding: EdgeInsets.all(instructionPadding),
+                    child: Status(),
+                  ),
+                ],
+              ),
             ),
-            TicTacToe(),
             Padding(
-              padding: EdgeInsets.all(instructionPadding),
-              child: Status(),
+              padding: EdgeInsets.fromLTRB(60, 8, 8, 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(40, 20, 2, 20),
+                    child: notes,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
-      )
+      ),
     );
   }
 }

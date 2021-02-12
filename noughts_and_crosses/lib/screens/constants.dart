@@ -30,4 +30,15 @@ const String p1Name = "Player 1";
 const String p2Name = "Player 2";
 const String p1Text = "$p1Name's Turn (X)";
 const String p2Text = "$p2Name's Turn (O)";
-const String resultSuffix = "has won the game!";
+const String resultSuffix = " has won the game!";
+const String tieText = "It was a tie! Better luck next time!";
+
+// Note text
+const TextStyle noteStyle = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.normal,
+);
+const notes = Text(
+  "Note: Wins are only checked when all moves are exhausted.",
+  style: noteStyle,
+);
