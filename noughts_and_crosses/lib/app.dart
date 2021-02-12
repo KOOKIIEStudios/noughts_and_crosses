@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // External Libraries
 import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
+import 'package:window_utils/window_utils.dart';
 // Internal
 import 'screens/home.dart';
 import 'models/tictactoe_model.dart';
@@ -16,7 +17,9 @@ var logger = Logger(
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
+    WindowUtils.setSize(
+      Size(600, 800),
+    );
     logger.i("Now fetching the home screen...");
     // Use multiprovider for future extension
     return MultiProvider(
