@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 // External Libraries
 import 'package:provider/provider.dart';
 // Internal
-import 'constants.dart';
 import '../models/status_model.dart';
 
 class Status extends StatefulWidget {
