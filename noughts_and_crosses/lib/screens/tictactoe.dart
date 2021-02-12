@@ -1,7 +1,5 @@
 // GridView containing the tic-tac-toe UI
 // Standard libraries
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 // External Libraries
 import 'package:logger/logger.dart';
