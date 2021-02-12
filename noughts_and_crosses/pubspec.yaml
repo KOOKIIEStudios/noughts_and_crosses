@@ -27,6 +27,7 @@ dependencies:
   # windows utils still affected by cross-linking bug: https://github.com/flutter/flutter/issues/66224
   logger: ^0.9.4
   provider: ^4.3.2
+  msix: ^0.1.12
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -78,3 +79,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+msix_config:
+  display_name: Noughts & Crosses
+  publisher_display_name: KOOKIIE Studios
+  identity_name: KOOKIIEStudios.Noughts&Crosses
+  msix_version: 1.0.0.0
+  logo_path: C:\Users\Admin\Documents\kookiie-bw_transparent.png
+  start_menu_icon_path: C:\Users\Admin\Documents\kookiie-bw_transparent.png
+  tile_icon_path: C:\Users\Admin\Documents\kookiie-bw_transparent.png
+  icons_background_color: transparent
+  architecture: x64
