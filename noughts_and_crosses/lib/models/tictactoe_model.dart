@@ -18,7 +18,7 @@ class TicTacToeModel extends ChangeNotifier {
   List<String> get contents => content;
 
   bool hasEnded() {
-    if (counter < 9) {
+    if (counter < 8) {
       return false;
     }
     else return true;
@@ -45,5 +45,22 @@ class TicTacToeModel extends ChangeNotifier {
       }
     }
     else print("Cell with index $index is not empty! Contents: ${content[index]}");
+  }
+
+  void reset() {
+    counter = 0;
+    content = [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ];
+    notifyListeners();
+    return;
   }
 }

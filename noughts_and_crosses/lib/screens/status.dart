@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 // Internal
 import 'constants.dart';
 import '../models/status_model.dart';
-import '../models/tictactoe_model.dart';
 
 class Status extends StatefulWidget {
   @override

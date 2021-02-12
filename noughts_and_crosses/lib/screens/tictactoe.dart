@@ -72,8 +72,13 @@ class GridCellState extends State<GridCell> {
             padding: innerPadding,
             width: cellSize,
             height: cellSize,
-            child: Text("ID: ${this.index}, Contents: ${ticTacToe.contents[this.index]}"),
-            color: Colors.black54,
+            alignment: Alignment.center,
+            child: Text(
+              "${ticTacToe.contents[this.index]}",
+              style: cellStyle,
+              textAlign: TextAlign.center,
+            ),
+            color: cellColour,
           ),
           onTap: () {
             if (!ticTacToe.hasEnded()) {
@@ -86,6 +91,7 @@ class GridCellState extends State<GridCell> {
               }
             }
             else {
+              ticTacToe.setContents(this.index);
               String result = hasWon(ticTacToe.contents);
               if (result.isNotEmpty) {
                 status.statusText = result + resultSuffix;

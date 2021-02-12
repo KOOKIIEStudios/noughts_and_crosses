@@ -16,4 +16,10 @@ class StatusModel extends ChangeNotifier{
     _status = text;
     notifyListeners();
   }
+
+  void reset() {
+    _status = p1Text;
+    notifyListeners();
+    return;
+  }
 }
